@@ -21,7 +21,7 @@ def save_data(data):
 
 @app.route('/')
 def home():
-    return 'Welcome to MARK1 Cloud Server!'
+    return 'Welcome to GURLEEN Cloud Server!'
 
 @app.route('/register', methods=['GET'])
 def register():
@@ -48,4 +48,4 @@ def get_pin(token, pin):
     return jsonify({"status": "error", "message": "Invalid token or pin"})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
